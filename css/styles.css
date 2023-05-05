@@ -214,7 +214,7 @@ body {
   color: var(--color-ocean);
 }
 .svg-burger {
-  fill: currentColor;
+  fill: var(--color-navy-blue);
 }
 
 /* Hero image */
