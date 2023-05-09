@@ -1151,7 +1151,7 @@ body {
   top: calc(50% - 288px);
   left: calc(50% - 204px);
   top: 0;
-  transform: translateY(0);
+  transform: translateY(17%);
 
   width: 408px;
   min-height: 576px;
