@@ -1423,6 +1423,7 @@ body {
   border: none;
   border-radius: 50%;
   outline: none;
+  stroke: var(--color-navy-blue);
 }
 
 @media (min-width: 768px) {
