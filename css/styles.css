@@ -1146,9 +1146,12 @@ body {
   transition-delay: 300ms;
 }
 .modal {
+  overflow: scroll;
   position: absolute;
   top: calc(50% - 288px);
   left: calc(50% - 204px);
+  top: 0;
+  transform: translateY(0);
 
   width: 408px;
   min-height: 576px;
@@ -1161,17 +1164,6 @@ body {
 
   opacity: 1;
   transition: transform 300ms ease-in 200ms, opacity 2500ms ease-in 200ms;
-}
-
-/* Phone styles  */
-@media only screen and (max-width: 767px) {
-  .modal {
-    top: calc(50% - 292px);
-    left: calc(50% - 196px);
-
-    width: 392px;
-    min-height: 584px;
-  }
 }
 
 .modal-btn {
@@ -1220,22 +1212,6 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--color-navy-blue);
-}
-
-/* Phone styles  */
-@media only screen and (max-width: 767px) {
-  .modal-form {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-/* Tablet styles  */
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
-  .modal-form {
-    padding-left: 23px;
-    padding-right: 25px;
-  }
 }
 
 .modal-form-label {
