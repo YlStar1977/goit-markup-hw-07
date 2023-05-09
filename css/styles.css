@@ -810,6 +810,12 @@ body {
   width: 264px;
   min-height: 72px;
 }
+/* Phone styles  */
+@media only screen and (max-width: 767px) {
+  .text-footer {
+    margin: 0 auto;
+  }
+}
 
 /* Footer icons  */
 
@@ -839,7 +845,12 @@ body {
   padding: 0px;
   gap: 16px;
 }
-
+/* Phone styles  */
+@media only screen and (max-width: 768px) {
+  .icon-list-footer {
+    justify-content: center;
+  }
+}
 .footer-link {
   display: flex;
   justify-content: center;
@@ -866,7 +877,6 @@ body {
 /* Subscribe */
 
 .box-subscribe {
-  width: 453px;
   height: 80px;
 }
 
@@ -892,6 +902,8 @@ body {
   .form-subscribe {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
   }
   .form-subscribe.input-subscribe {
@@ -931,6 +943,13 @@ body {
   line-height: 2;
 
   color: var(--color-white);
+}
+
+/* Phone styles */
+@media only screen and (max-width: 767px) {
+  .input-subscribe {
+    width: 398px;
+  }
 }
 
 .button-subscribe {
@@ -1103,6 +1122,7 @@ body {
 
 /* Modal window  */
 .bacdrop {
+  overflow: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -1142,6 +1162,18 @@ body {
   opacity: 1;
   transition: transform 300ms ease-in 200ms, opacity 2500ms ease-in 200ms;
 }
+
+/* Phone styles  */
+@media only screen and (max-width: 767px) {
+  .modal {
+    top: calc(50% - 292px);
+    left: calc(50% - 196px);
+
+    width: 392px;
+    min-height: 584px;
+  }
+}
+
 .modal-btn {
   display: block;
   margin-left: auto;
@@ -1189,8 +1221,23 @@ body {
 
   color: var(--color-navy-blue);
 }
-.modal-form {
+
+/* Phone styles  */
+@media only screen and (max-width: 767px) {
+  .modal-form {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
+
+/* Tablet styles  */
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .modal-form {
+    padding-left: 23px;
+    padding-right: 25px;
+  }
+}
+
 .modal-form-label {
   display: block;
   margin-bottom: 4px;
