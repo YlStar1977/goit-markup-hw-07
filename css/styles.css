@@ -44,6 +44,7 @@ body {
 }
 .container {
   /* Phone styles */
+  min-width: 320px;
   max-width: 428px;
   margin-left: auto;
   margin-right: auto;
@@ -111,7 +112,7 @@ body {
 }
 
 /* Phone styles  */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav-flex {
     display: none;
   }
@@ -184,13 +185,20 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* Tablet styles  */
+@media only screen and (min-width: 768px) {
+  .address {
+    margin-left: 16px;
+  }
+}
+
 .address:hover,
 .address:focus {
   color: var(--color-ocean);
 }
 
 /* Phone styles  */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .adress-flex {
     display: none;
   }
@@ -244,11 +252,10 @@ body {
   padding-bottom: 112px;
 }
 /* Tablet styles  */
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1157px) {
   .hero-section {
     max-width: 768px;
     padding-top: 112px;
-    padding-bottom: 112px;
   }
 }
 /* Desctop styles  */
@@ -329,11 +336,14 @@ body {
 /* Section-1 */
 
 /* Phone styles  */
-.section-conteiner {
-  padding-top: 96px;
-  padding-bottom: 96px;
+@media only screen and (max-width: 767px) {
+  .section-conteiner {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 }
-/* Tablet styles  */
+
+/* Tablet styles */
 @media screen and (min-width: 768px) {
   .section-conteiner {
     padding-top: 96px;
@@ -362,28 +372,37 @@ body {
 }
 
 /* Phone styles  */
-.flex-list {
-  display: flex;
-  flex-wrap: wrap;
+@media only screen and (max-width: 767px) {
+  .flex-list {
+    display: block;
+  }
 }
-
-/* Tablet styles */
-@media only screen and (max-width: 1158px) {
+/* Tablet styles  */
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .flex-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
   }
 }
-@media screen and (min-width: 768px) {
+
+/* Desktop styles */
+@media only screen and (min-width: 1158px) {
+  .flex-list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .flex-list-section {
     flex-basis: calc((100% - 3 * 24px) / 2);
   }
 }
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1157px) {
   .flex-list-section:nth-last-child(-n + 2) {
     margin-bottom: 0px;
   }
@@ -403,9 +422,9 @@ body {
   }
 }
 
-/* Phone styles  */
+/* Phone and styles  */
 
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1157px) {
   .section-icons {
     display: none;
   }
@@ -431,13 +450,13 @@ body {
   letter-spacing: 0.02em;
   color: var(--color-navy-blue);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .section-title {
     text-align: center;
   }
 }
 /* Phone and tablet styles  */
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1157px) {
   .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -476,7 +495,7 @@ body {
 /* Section 2 */
 
 /* Phone and tablet styles  */
-@media only screen and (max-width: 1158px) {
+@media only screen and (max-width: 1157px) {
   .container-section {
     display: none;
   }
@@ -705,58 +724,47 @@ body {
   background: var(--color-navy-blue);
 }
 
-/* Phone styles  */
-@media only screen and (max-width: 768px) {
+/* Phone and tablet styles  */
+@media only screen and (max-width: 1157px) {
   .footer {
-    height: 664px;
     padding: 96px 0;
   }
 }
-
-/* Tablet styles  */
-@media only screen and (min-width: 768px) {
-  .footer {
-    height: 456px;
-    padding: 96px 0;
-  }
-}
-
 /* Desctop styles  */
 @media only screen and (min-width: 1158px) {
   .footer {
-    height: 312px;
     padding: 100px 0;
   }
 }
-
 /* Tablet styles  */
-@media only screen and (min-width: 768px) {
-  .footer-grop-conteiner {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-conteiner {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0 108px;
   }
 }
-
 /* Desctop styles  */
 @media only screen and (min-width: 1158px) {
   .footer-conteiner {
     display: flex;
+    flex-wrap: nowrap;
     align-items: baseline;
   }
 }
-
-.footer-logo {
-  align-items: baseline;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-bottom: 72px;
+/* Phone styles  */
+@media only screen and (max-width: 767px) {
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 72px;
+  }
 }
+
 /* Tablet styles  */
 @media only screen and (min-width: 768px) {
   .footer-logo {
     margin-right: 24px;
     margin-bottom: 72px;
-    margin-left: 108px;
   }
 }
 /* Desctop styles  */
@@ -806,10 +814,9 @@ body {
 /* Footer icons  */
 
 /* Phone styles  */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .container-icon-footer {
-    margin-left: 110px;
-    margin-right: 110px;
+    text-align: center;
     margin-bottom: 72px;
   }
 }
@@ -825,13 +832,6 @@ body {
   color: var(--color-white);
 }
 
-/* Phone styles  */
-@media only screen and (max-width: 768px) {
-  .icon-text {
-    /* margin-left: 166px;
-    margin-right: 166px; */
-  }
-}
 .icon-list-footer {
   display: flex;
   flex-direction: row;
@@ -866,14 +866,39 @@ body {
 /* Subscribe */
 
 .box-subscribe {
-  margin-left: 80px;
   width: 453px;
   height: 80px;
 }
+
+@media only screen and (max-width: 767px) {
+  .box-subscribe {
+    text-align: center;
+  }
+}
+/* Desctop styles  */
+@media only screen and (min-width: 1158px) {
+  .box-subscribe {
+    margin-left: 80px;
+  }
+}
+
 .form-subscribe {
   display: flex;
   width: 100%;
 }
+
+/* Phone styles  */
+@media only screen and (max-width: 767px) {
+  .form-subscribe {
+    position: relative;
+    display: flex;
+    gap: 24px;
+  }
+  .form-subscribe.input-subscribe {
+    width: 100%;
+  }
+}
+
 .titel-subscribe {
   font-family: var(--primary-front);
   font-weight: 500;
@@ -936,6 +961,14 @@ body {
 .button-subscribe:focus {
   background-color: var(--color-ocean);
   cursor: pointer;
+}
+
+/* Phone styles  */
+@media only screen and (max-width: 767px) {
+  .button-subscribe {
+    margin-left: 0px;
+    margin-bottom: 24px;
+  }
 }
 
 .icon-subscribe {
