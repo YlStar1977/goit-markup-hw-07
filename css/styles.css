@@ -171,8 +171,6 @@ body {
 .address {
   font-family: var(--primary-front);
   font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
 
   letter-spacing: 0.02em;
 
@@ -185,7 +183,15 @@ body {
 /* Tablet styles  */
 @media only screen and (min-width: 768px) {
   .address {
+    font-size: 12px;
+    line-height: 1.17;
     margin-left: 16px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .address {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
@@ -222,6 +228,9 @@ body {
 @media screen and (min-width: 768px) {
   .link-heder {
     display: flex;
+  }
+  .mail {
+    margin-bottom: 12px;
   }
 }
 
