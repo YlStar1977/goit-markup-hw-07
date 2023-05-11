@@ -719,7 +719,6 @@ body {
   margin-bottom: 72px;
 }
 
-/* Pfone styles  */
 .container-icon {
   display: flex;
   flex-direction: row;
@@ -728,9 +727,11 @@ body {
   column-gap: 16px;
   row-gap: 72px;
 }
+
 /* Tablet styles  */
 @media only screen and (min-width: 768px) {
   .container-icon {
+    justify-content: center;
     column-gap: 24px;
     row-gap: 62px;
   }
@@ -738,9 +739,8 @@ body {
 /* Desctop styles  */
 @media only screen and (min-width: 1158px) {
   .container-icon {
-    width: 1128px;
-    height: 88px;
-    gap: 24px;
+    justify-content: center;
+    column-gap: 24px;
   }
 }
 .compani-link {
@@ -765,9 +765,26 @@ body {
 }
 
 .link-icon {
-  width: 168px;
   height: 88px;
   color: var(--color-ocean);
+}
+
+@media only screen and (max-width: 767px) {
+  .link-icon {
+    width: calc((100% - 16px) / 2);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .link-icon {
+    width: calc((100% - 232px) / 3);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .link-icon {
+    width: calc((100% - 120px) / 6);
+  }
 }
 
 .compani-icon {
