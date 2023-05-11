@@ -1205,11 +1205,10 @@ body {
   overflow: scroll;
   position: absolute;
   top: calc(50% - 288px);
-  left: calc(50% - 204px);
+
   top: 0;
   transform: translateY(10%);
 
-  width: 408px;
   min-height: 576px;
   padding: 24px;
 
@@ -1222,10 +1221,16 @@ body {
   transition: transform 300ms ease-in 200ms, opacity 2500ms ease-in 200ms;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 428px) and (max-width: 767px) {
   .modal {
-    max-width: 392px;
+    width: 392px;
     left: calc(50% - 196px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    left: calc(50% - 204px);
   }
 }
 .modal-btn {
