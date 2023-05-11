@@ -1463,6 +1463,12 @@ body {
   transform: translateX(0);
 }
 
+@media only screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+
 .menu-toggle-open {
   margin-top: 24px;
   margin-bottom: 24px;
