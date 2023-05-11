@@ -1564,7 +1564,6 @@ body {
 .menu-toggle:focus {
   color: #ffffff;
   background-color: #404bbf;
-  fill: #ffffff;
 }
 
 @media (min-width: 768px) {
