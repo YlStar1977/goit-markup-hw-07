@@ -1222,6 +1222,12 @@ body {
   transition: transform 300ms ease-in 200ms, opacity 2500ms ease-in 200ms;
 }
 
+@media only screen and (max-width: 767px) {
+  .modal {
+    max-width: 392px;
+    left: calc(50% - 196px);
+  }
+}
 .modal-btn {
   display: block;
   margin-left: auto;
@@ -1462,7 +1468,11 @@ body {
 .menu-container.is-open {
   transform: translateX(0);
 }
-
+@media only screen and (max-width: 320px) {
+  .menu-containe {
+    max-width: 320px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .menu-container {
     display: none;
@@ -1502,7 +1512,7 @@ body {
 }
 @media only screen and (max-width: 427px) {
   .mobile-icon {
-    gap: 35px;
+    gap: 40px;
   }
 }
 
