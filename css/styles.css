@@ -69,18 +69,14 @@ body {
 /* Top line header*/
 /* logo  */
 
-/* Phone and tablet styles  */
-@media screen and (max-width: 1158px) {
-  .header-container {
-    display: flex;
-    align-items: center;
-  }
+.header-container {
+  display: flex;
+  align-items: center;
 }
-/* Desctop styles  */
-@media screen and (min-width: 1158px) {
+
+@media only screen and (max-width: 767px) {
   .header-container {
-    display: flex;
-    align-items: center;
+    height: 70px;
   }
 }
 
@@ -119,8 +115,6 @@ body {
   .nav-flex {
     display: flex;
     gap: 40px;
-    padding-top: 24px;
-    padding-bottom: 24px;
   }
 }
 
@@ -181,11 +175,10 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Tablet styles  */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .address {
     font-size: 12px;
-    line-height: 1.17;
-    margin-left: 16px;
+    line-height: 1.7;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -207,11 +200,11 @@ body {
   }
 }
 /* Tablet styles  */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .adress-flex {
     display: block;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 }
 /* Desctop styles  */
@@ -219,21 +212,18 @@ body {
   .adress-flex {
     display: flex;
     gap: 40px;
-    padding-top: 24px;
-    padding-bottom: 24px;
   }
 }
-
-/* Tablet styles  */
 @media screen and (min-width: 768px) {
-  .link-heder {
-    display: flex;
-  }
-  .mail {
-    margin-bottom: 12px;
+  .link-heder .mail {
+    margin-bottom: 16px;
   }
 }
-
+@media only screen and (min-width: 1158px) {
+  .link-heder {
+    margin: 24px 0;
+  }
+}
 /* Hero image */
 
 .hero-section {
@@ -251,7 +241,7 @@ body {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/Dark-bgmobile@1x.jpg);
+      url(../images/hero/people-officemobile@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -261,18 +251,18 @@ body {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero/Dark-bgmobile@2x.jpg);
+        url(../images/hero/people-officemobile@2x.jpg);
     }
   }
 }
 
-@media only screen and (min-width: 429px) and (max-width: 767px) {
+@media only screen and (min-width: 429px) {
   .hero-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/Dark-bgtab@1x.jpg);
+      url(../images/hero/people-officetablet@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -282,18 +272,18 @@ body {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero/Dark-bgtab@2x.jpg);
+        url(../images/hero/people-officetablet@2x.jpg);
     }
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .hero-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/people-office\ 1desc@1x.jpg);
+      url(../images/hero/people-officedesck@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -303,27 +293,25 @@ body {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero/people-office\ 1desc@2x.jpg);
+        url(../images/hero/people-officedesck@2x.jpg);
     }
   }
 }
 /* Phone styles  */
 .hero-section {
-  max-width: 428px;
   padding-top: 112px;
   padding-bottom: 112px;
 }
 /* Tablet styles  */
-@media screen and (max-width: 1157px) {
+@media screen and (min-width: 768px) {
   .hero-section {
-    max-width: 768px;
+    max-width: 1440px;
     padding-top: 112px;
   }
 }
 /* Desctop styles  */
 @media screen and (min-width: 1158px) {
   .hero-section {
-    max-width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
   }
@@ -445,7 +433,6 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .flex-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 
     column-gap: 24px;
@@ -465,7 +452,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .flex-list-section {
-    flex-basis: calc((100% - 3 * 24px) / 2);
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 @media screen and (max-width: 1157px) {
@@ -823,7 +810,7 @@ body {
   .footer-conteiner {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 108px;
+    width: 552px;
   }
 }
 /* Desctop styles  */
